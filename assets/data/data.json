@@ -1,0 +1,70 @@
+{
+	"title": "Mayulis leal | Decoradora florista",
+    "description": "Soy una Decoradora florista con 15 años de experiencia",
+    "logo": "/logo.ico",
+    "media": {
+        "email": "mlfloristdecorator@gmail.com",
+        "twitter": "https://x.com/MLflorista",
+        "tiktok": "https://www.tiktok.com/@mlflorista",
+        "instagram": "https://www.instagram.com/ml.florista/?next=%2Felax_248%2F",
+        "pinterest": "https://co.pinterest.com/mlflorista1/",
+        "likedin": "https://www.linkedin.com/in/mayulis-leal-251152282/"
+    },
+    "header": {
+    	"image": "/img/bg_header_5.jpeg",
+    	"title": "Mayulis Leal",
+    	"about": "Soy diseñadora florista con 15 años de experiencia en la creación de hermosas decoraciones para eventos, tales como bodas, fiestas de cumpleaños y otros.",
+    	"button": "Sobre mi"
+    },
+    "experience": [
+        {
+            "title": "Metacortex",
+            "subtitle": "Programador",
+            "description": "Programo software respetable desde un cubículo.",
+            "date": "1999"
+        },
+        {
+            "title": "Nebuchadnezzar",
+            "subtitle": "El Elegido",
+            "description": "Me encargo de salvar el mundo.",
+            "date": "1999 - Actualidad"
+        }
+    ],
+    "services": [
+        {
+            "image": "/work_2.jpg",
+            "title": "Game Development",
+            "description": "I can provide video game development services because I use tools like Godot Engine, Blender and Pygame."
+        },
+        {
+            "image": "/work_2.jpg",
+            "title": "Technical support",
+            "description": "Help users with Linux or Windows related technical issues, such as installing software or resolving network issues."
+        },
+        {
+            "image": "/work_2.jpg",
+            "title": "UI/UX Design",
+            "description": "I use UI/UX design programs such as QT creator, QT designer and Godot Engine."
+        },
+        {
+            "image": "/work_2.jpg",
+            "title": "Web Development",
+            "description": "I have basic knowledge in web development that will make me capable of creating, assembling and managing web pages."
+        }
+    ],
+    "galery": {
+    	"image_1": "/work_2.jpg",
+    	"image_2": "/work_2.jpg",
+    	"image_3": "/work_2.jpg",
+    	"image_4": "/work_2.jpg",
+    	"image_5": "/work_2.jpg",
+    	"button": "ver más"
+
+    },
+    "footer": {
+    	"description": "Si estás interesado, contáctanos a nuestro correo electrónico mlfloristdecorator@gmail.com o a nuestro Whatsapp",
+    	"button_whatsapp": "ver más",
+    	"title": "Redes sociales: ",
+    	"copyright": "© 2023 - 2024 ML Florist Decorator. todos los derechos reservados."
+    }
+}
