@@ -4,28 +4,34 @@ from mlflorist import data
 from mlflorist.styles.styles import BASE_STYLE, MAX_WIDTH, STYLESHEETS, EmSize, Size, glassmorphism, Colors
 from mlflorist.views.navbar import navbar
 from mlflorist.views.header import header
+from mlflorist.views.info import info
 
 DATA = data.data
 
+
 def index() -> rx.Component:
-    return rx.center(
-        rx.vstack(
-            navbar(),
-            header(DATA.header),
-            rx.center(
-                rx.vstack(
-                    rx.text("hello world"),
+    return rx.vstack(
+        navbar(),
+        rx.center(
+            rx.vstack(
+                header(DATA.header),
+                rx.center(
+                    rx.vstack(
+                        info("Experiencia", DATA.experience),
+                    ),
+                    max_width=MAX_WIDTH,
+                    width="100%",
+                    spacing=Size.XBIG.value,
+                    padding_x=EmSize.DEFAULT.value,
+                    padding_y=EmSize.DEFAULT.value,
                 ),
-                max_width=MAX_WIDTH,
-                width="100%",
-                spacing=Size.XBIG.value,
-                padding_x=EmSize.DEFAULT.value,
-                padding_y=EmSize.DEFAULT.value,
             ),
             width="100%",
+            as_child=True,
             spacing=Size.XBIG.value,
         ),
-        
+        # width="100%",
+        spacing=Size.XBIG.value,  
     )
 
 

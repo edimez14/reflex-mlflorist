@@ -1,8 +1,9 @@
 from enum import Enum
 import reflex as rx
 
-MAX_WIDTH = "1200px"
-IMAGE_HEIGHT = "200px"
+MAX_WIDTH = "1000px"
+IMAGE_HEIGHT = "400px"
+IMAGE_WIDTH = "300px"
 AVATAR_HEIGHT = "300px"
 
 class EmSize(Enum):
@@ -32,6 +33,7 @@ class Colors(Enum):
     hotpink = "#FF69B4"
     aqua = "#00FFFF"
     ivory = "#FFFFF0"
+    gray = "#808080"
 
 
 glassmorphism = dict(
@@ -45,6 +47,7 @@ glassmorphism = dict(
 
 STYLESHEETS = [
     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css",
+    "https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css",
 ]
 
 BASE_STYLE = {

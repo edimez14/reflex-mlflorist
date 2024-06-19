@@ -1,14 +1,14 @@
 import reflex as rx
-
+from mlflorist.components.boxicon import boxicon
 
 def icon_link(icon: str, url: str, text="",) -> rx.Component:
     return rx.link(
         rx.mobile_only(
-            rx.icon(icon, size=15),
+            boxicon(icon, "15px"),
             text,
         ),
         rx.tablet_and_desktop(
-            rx.icon(icon, size=20),
+            boxicon(icon, "20px"),
             text,
         ),
         href=url,

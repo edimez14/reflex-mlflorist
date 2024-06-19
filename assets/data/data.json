@@ -3,12 +3,30 @@
     "description": "Soy una Decoradora florista con 15 años de experiencia",
     "logo": "/logo.ico",
     "media": {
-        "email": "mlfloristdecorator@gmail.com",
-        "twitter": "https://x.com/MLflorista",
-        "tiktok": "https://www.tiktok.com/@mlflorista",
-        "instagram": "https://www.instagram.com/ml.florista/?next=%2Felax_248%2F",
-        "pinterest": "https://co.pinterest.com/mlflorista1/",
-        "likedin": "https://www.linkedin.com/in/mayulis-leal-251152282/"
+        "email": {
+            "icon": "bx bxl-gmail",
+            "url": "mlfloristdecorator@gmail.com"
+        },
+        "twitter": {
+            "icon": "bx bxl-twitter",
+            "url": "https://x.com/MLflorista"
+        },
+        "tiktok": {
+            "icon": "bx bxl-tiktok",
+            "url": "https://www.tiktok.com/@mlflorista"
+        },
+        "instagram": {
+            "icon": "bx bxl-instagram",
+            "url": "https://www.instagram.com/ml.florista/?next=%2Felax_248%2F"
+        },
+        "pinterest": {
+            "icon": "bx bxl-pinterest",
+            "url": "https://co.pinterest.com/mlflorista1/"
+        },
+        "likedin": {
+            "icon": "bx bxl-linkedin",
+            "url": "https://www.linkedin.com/in/mayulis-leal-251152282/"
+        }
     },
     "header": {
     	"image": "/img/bg_header_5.jpeg",
@@ -16,20 +34,26 @@
     	"about": "Soy diseñadora florista con 15 años de experiencia en la creación de hermosas decoraciones para eventos, tales como bodas, fiestas de cumpleaños y otros.",
     	"button": "Sobre mi"
     },
-    "experience": [
-        {
+    "experience": {
+       "experience_1": {
             "title": "Metacortex",
             "subtitle": "Programador",
-            "description": "Programo software respetable desde un cubículo.",
+            "description": "Soy diseñadora florista con 15 años de experiencia en la creación de hermosas decoraciones para eventos, tales como bodas, fiestas de cumpleaños y otros.",
             "date": "1999"
         },
-        {
+        "experience_2": {
             "title": "Nebuchadnezzar",
             "subtitle": "El Elegido",
-            "description": "Me encargo de salvar el mundo.",
+            "description": "Soy diseñadora florista con 15 años de experiencia en la creación de hermosas decoraciones para eventos, tales como bodas, fiestas de cumpleaños y otros.",
+            "date": "1999 - Actualidad"
+        },
+        "experience_3": {
+            "title": "Nebuchadnezzar",
+            "subtitle": "El Elegido",
+            "description": "Soy diseñadora florista con 15 años de experiencia en la creación de hermosas decoraciones para eventos, tales como bodas, fiestas de cumpleaños y otros.",
             "date": "1999 - Actualidad"
         }
-    ],
+    },
     "services": [
         {
             "image": "/work_2.jpg",

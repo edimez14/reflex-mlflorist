@@ -1,7 +1,7 @@
 import reflex as rx
-from portafolio.data import Service
+from mlflorist.data import Service
 
-from portafolio.styles.styles import BASE_STYLE, MAX_WIDTH, STYLESHEETS, EmSize, Size, glassmorphism
+from mlflorist.styles.styles import BASE_STYLE, MAX_WIDTH, STYLESHEETS, EmSize, Size, glassmorphism
 
 
 def card_detail(service: Service) -> rx.Component:

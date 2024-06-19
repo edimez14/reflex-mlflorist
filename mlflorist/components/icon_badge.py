@@ -1,6 +1,6 @@
 import reflex as rx
 
-from portafolio.styles.styles import EmSize, STYLESHEETS
+from mlflorist.styles.styles import EmSize, STYLESHEETS
 
 
 def icon_badge(icon: str) -> rx.Component:

@@ -1,7 +1,7 @@
 import reflex as rx
 from mlflorist.components.heading import heading
-# from mlflorist.components.media import media
 from mlflorist.components.text import texts
+from mlflorist.components.button import button
 from mlflorist.data import Header
 from mlflorist.styles.styles import Colors, EmSize, Size
 
@@ -13,6 +13,15 @@ def header(data: Header) -> rx.Component:
                 rx.vstack(
                     heading(data.title, Colors.ivory.value),
                     texts(data.about, Size.DEFAULT.value, Colors.ivory.value),
+                    rx.link(
+                        button(
+                            data.button,
+                            Size.SMALL.value,
+                            "0.5px",
+                            Colors.ivory.value
+                        ),
+                        href="#"
+                    ),
                     width="50%",
                     align="center",
                     spacing=Size.MEDIUM.value,
@@ -28,6 +37,15 @@ def header(data: Header) -> rx.Component:
                 rx.vstack(
                     heading(data.title, Colors.ivory.value, True),
                     texts(data.about, Size.MEDIUM.value, Colors.ivory.value),
+                    rx.link(
+                        button(
+                            data.button,
+                            Size.SMALL.value,
+                            "0.5px",
+                            Colors.ivory.value
+                        ),
+                        href="#"
+                    ),
                     width="50%",
                     align="center",
                     spacing=Size.MEDIUM.value,

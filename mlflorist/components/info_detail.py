@@ -1,86 +1,102 @@
 import reflex as rx
-from portafolio.components.icon_badge import icon_badge
-from portafolio.components.icon_button import icon_button
-from portafolio.data import Info
-from portafolio.styles.styles import IMAGE_HEIGHT, EmSize, STYLESHEETS, Size
+from mlflorist.data import ExperienceItem
+from mlflorist.components.text import texts
+from mlflorist.styles.styles import Colors, IMAGE_HEIGHT, IMAGE_WIDTH, EmSize, Size, glassmorphism
 
 
-def info_detail(info: Info) -> rx.Component:
-    return rx.flex(
-        rx.hstack(
-            icon_badge(info.icon),
-            rx.vstack(
-                rx.text.strong(info.title),
-                rx.text(info.subtitle),
-                rx.text(
-                    info.description,
-                    size=Size.SMALL.value,
-                    color_scheme="gray"
-                ),
+def info_detail(info: ExperienceItem, reverse=False) -> rx.Component:
+    return rx.box(
+        rx.mobile_only(
+            rx.box(
                 rx.cond(
-                    info.technologies,
-                    rx.flex(
-                        *[
-                            rx.badge(
-                                rx.box(class_name=technology.icon),
-                                technology.name,
-                                color_scheme="gray"
-                            )
-                            for technology in info.technologies
-                        ],
-                        wrap="wrap",
-                        spacing=Size.SMALL.value
-                    )
-                ),
-                rx.hstack(
-                    rx.cond(
-                        info.url != "",
-                        icon_button(
-                            "link",
-                            info.url
-                        )
+                    reverse == False,
+                    rx.vstack(
+                        rx.image(
+                            src="/img/bg_header_5.jpeg",
+                            width=IMAGE_WIDTH, height=IMAGE_HEIGHT,
+                            border_radius="15px 15px",
+                            margin="auto",
+                        ),
+                        rx.vstack(
+                            rx.text.strong(info.title),
+                            rx.text(info.subtitle),
+                            texts(
+                                info.description,
+                                Size.SMALL.value,
+                                Colors.gray.value
+                            ),
+                            style=glassmorphism,
+                            width="100%",
+                            padding_x=EmSize.DEFAULT.value,
+                            padding_y=EmSize.BIG.value,
+                            margin="auto 0",
+                        ),
+                        # width="100%",
+                        spacing=Size.SMALL.value,
+                        margin="auto",
+
                     ),
-                    rx.cond(
-                        info.github != "",
-                        icon_button(
-                            "github",
-                            info.github
-                        )
-                    )
                 ),
-                spacing=Size.SMALL.value,
-                width="100%"
             ),
-            spacing=Size.DEFAULT.value,
-            width="100%"
         ),
-        rx.cond(
-            info.image != "",
-            rx.image(
-                src=info.image,
-                height=IMAGE_HEIGHT,
-                width="auto",
-                border_radius=EmSize.DEFAULT.value,
-                object_fit="cover"
-            )
-        ),
-        rx.vstack(
-            rx.cond(
-                info.date != "",
-                rx.badge(info.date)
+        rx.tablet_and_desktop(
+            rx.box(
+                rx.cond(
+                    reverse == False,
+                    rx.hstack(
+                        rx.vstack(
+                            rx.text.strong(info.title),
+                            rx.text(info.subtitle),
+                            texts(
+                                info.description,
+                                Size.SMALL.value,
+                                Colors.gray.value
+                            ),
+                            style=glassmorphism,
+                            width="100%",
+                            padding_x=EmSize.DEFAULT.value,
+                            padding_y=EmSize.BIG.value,
+                            margin="auto 2.5em",
+                        ),
+                        rx.image(
+                            src="/img/bg_header_5.jpeg",
+                            width=IMAGE_WIDTH, height=IMAGE_HEIGHT,
+                            border_radius="15px 15px",
+                        ),
+                        # width="100%",
+                        spacing=Size.SMALL.value,
+                        margin="auto",
+                    ),
+                ),
             ),
-            rx.cond(
-                info.certificate != "",
-                icon_button(
-                    "shield-check",
-                    info.certificate,
-                    solid=True
-                )
+            rx.box(
+                rx.cond(
+                    reverse == True,
+                    rx.hstack(
+                        rx.image(
+                            src="/img/bg_header_5.jpeg",
+                            width=IMAGE_WIDTH, height=IMAGE_HEIGHT,
+                            border_radius="15px 15px",
+                        ),
+                        rx.vstack(
+                            rx.text.strong(info.title),
+                            rx.text(info.subtitle),
+                            texts(
+                                info.description,
+                                Size.SMALL.value,
+                                Colors.gray.value
+                            ),
+                            style=glassmorphism,
+                            width="100%",
+                            padding_x=EmSize.DEFAULT.value,
+                            padding_y=EmSize.BIG.value,
+                            margin="auto 2.5em",
+                        ),
+                        # width="100%",
+                        spacing=Size.SMALL.value,
+                        margin="auto",
+                    ),
+                ),
             ),
-            spacing=Size.SMALL.value,
-            align="end"
         ),
-        flex_direction=["column-reverse", "row"],
-        spacing=Size.DEFAULT.value,
-        width="100%"
     )

@@ -7,28 +7,28 @@ from mlflorist.styles.styles import Size
 def media(data: Media) -> rx.Component:
     return rx.hstack(
         icon_link(
-            "mail",
-            data.email,
+            data.email.icon,
+            data.email.url,
         ),
         icon_link(
-            "twitter",
-            data.twitter,
+            data.twitter.icon,
+            data.twitter.url,
         ),
         icon_link(
-            "file-video",
-            data.tiktok,
+            data.tiktok.icon,
+            data.tiktok.url,
         ),
         icon_link(
-            "instagram",
-            data.instagram,
+            data.instagram.icon,
+            data.instagram.url,
         ),
         icon_link(
-            "image",
-            data.pinterest,
+            data.pinterest.icon,
+            data.pinterest.url,
         ),
         icon_link(
-            "linkedin",
-            data.likedin,
+            data.likedin.icon,
+            data.likedin.url,
         ),
         spacing=Size.SMALL.value
     )
