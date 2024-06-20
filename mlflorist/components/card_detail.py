@@ -1,27 +1,30 @@
 import reflex as rx
 from mlflorist.data import Service
-
-from mlflorist.styles.styles import BASE_STYLE, MAX_WIDTH, STYLESHEETS, EmSize, Size, glassmorphism
+from mlflorist.styles.styles import IMAGE_HEIGHT, EmSize, Size, glassmorphism
 
 
 def card_detail(service: Service) -> rx.Component:
-    return rx.vstack(
-        rx.icon(
-            service.icon,
-            size=62
+    return rx.card(
+        rx.box(
+            rx.inset(
+                rx.image(
+                    src=service.image,
+                    height="300px",
+                    width="100%",
+                    object_fit="cover"
+                ),
+                side="top",
+                pb="current",
+            ),
+            rx.text.strong(service.title),
+            rx.text(
+                service.description,
+                size=Size.SMALL.value,
+                color_scheme="gray",
+            ),
+            spacing=Size.MEDIUM.value,
         ),
-        rx.text.strong(
-            service.title,
-            align="center",
-            as_="div"
-        ),
-        rx.text(
-            service.description,
-            size=Size.SMALL.value,
-            color_scheme="gray",
-            align="center", as_="div"
-        ),
-        align="center",
+        style=glassmorphism,
         width="100%",
-        padding_y=EmSize.MEDIUM.value,
+        variant="ghost",
     )

@@ -5,6 +5,8 @@ from mlflorist.styles.styles import BASE_STYLE, MAX_WIDTH, STYLESHEETS, EmSize, 
 from mlflorist.views.navbar import navbar
 from mlflorist.views.header import header
 from mlflorist.views.info import info
+from mlflorist.views.service import service
+from mlflorist.views.footer import footer
 
 DATA = data.data
 
@@ -18,6 +20,7 @@ def index() -> rx.Component:
                 rx.center(
                     rx.vstack(
                         info("Experiencia", DATA.experience),
+                        service(DATA.services),
                     ),
                     max_width=MAX_WIDTH,
                     width="100%",
@@ -25,13 +28,14 @@ def index() -> rx.Component:
                     padding_x=EmSize.DEFAULT.value,
                     padding_y=EmSize.DEFAULT.value,
                 ),
+                footer(DATA.footer)
             ),
             width="100%",
             as_child=True,
             spacing=Size.XBIG.value,
         ),
         # width="100%",
-        spacing=Size.XBIG.value,  
+        spacing=Size.XBIG.value,
     )
 
 

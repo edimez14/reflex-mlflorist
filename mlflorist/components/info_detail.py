@@ -12,8 +12,8 @@ def info_detail(info: ExperienceItem, reverse=False) -> rx.Component:
                     reverse == False,
                     rx.vstack(
                         rx.image(
-                            src="/img/bg_header_5.jpeg",
-                            width=IMAGE_WIDTH, height=IMAGE_HEIGHT,
+                            src=info.image,
+                            width="200px", height="300px",
                             border_radius="15px 15px",
                             margin="auto",
                         ),
@@ -59,7 +59,7 @@ def info_detail(info: ExperienceItem, reverse=False) -> rx.Component:
                             margin="auto 2.5em",
                         ),
                         rx.image(
-                            src="/img/bg_header_5.jpeg",
+                            src=info.image,
                             width=IMAGE_WIDTH, height=IMAGE_HEIGHT,
                             border_radius="15px 15px",
                         ),
@@ -74,7 +74,7 @@ def info_detail(info: ExperienceItem, reverse=False) -> rx.Component:
                     reverse == True,
                     rx.hstack(
                         rx.image(
-                            src="/img/bg_header_5.jpeg",
+                            src=info.image,
                             width=IMAGE_WIDTH, height=IMAGE_HEIGHT,
                             border_radius="15px 15px",
                         ),

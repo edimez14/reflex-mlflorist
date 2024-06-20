@@ -26,7 +26,8 @@ class Header:
 
 
 class ExperienceItem:
-    def __init__(self, title, subtitle, description, date):
+    def __init__(self, image, title, subtitle, description, date):
+        self.image = image
         self.title = title
         self.subtitle = subtitle
         self.description = description
@@ -47,7 +48,7 @@ class Service:
         self.description = description
 
 
-class Galery:
+class Gallery:
     def __init__(self, image_1, image_2, image_3, image_4, image_5, button):
         self.image_1 = image_1
         self.image_2 = image_2
@@ -74,7 +75,7 @@ class Data:
         self.header = Header(**header)
         self.experience = Experience(**experience)
         self.services = [Service(**srv) for srv in services]
-        self.galery = Galery(**galery)
+        self.gallery = Galery(**gallery)
         self.footer = Footer(**footer)
 
 
@@ -83,5 +84,3 @@ with open("assets/data/data.json") as file:
     json_data = json.load(file)
 
 data = Data(**json_data)
-
-# info("Experiencia", data.experience)

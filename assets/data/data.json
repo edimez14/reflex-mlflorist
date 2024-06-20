@@ -29,25 +29,28 @@
         }
     },
     "header": {
-    	"image": "/img/bg_header_5.jpeg",
+    	"image": "/img/bg_header.jpg",
     	"title": "Mayulis Leal",
     	"about": "Soy diseñadora florista con 15 años de experiencia en la creación de hermosas decoraciones para eventos, tales como bodas, fiestas de cumpleaños y otros.",
     	"button": "Sobre mi"
     },
     "experience": {
        "experience_1": {
+            "image": "/img/bg_header.jpg",
             "title": "Metacortex",
             "subtitle": "Programador",
             "description": "Soy diseñadora florista con 15 años de experiencia en la creación de hermosas decoraciones para eventos, tales como bodas, fiestas de cumpleaños y otros.",
             "date": "1999"
         },
         "experience_2": {
+            "image": "/img/bg_header.jpg",
             "title": "Nebuchadnezzar",
             "subtitle": "El Elegido",
             "description": "Soy diseñadora florista con 15 años de experiencia en la creación de hermosas decoraciones para eventos, tales como bodas, fiestas de cumpleaños y otros.",
             "date": "1999 - Actualidad"
         },
         "experience_3": {
+            "image": "/img/bg_header.jpg",
             "title": "Nebuchadnezzar",
             "subtitle": "El Elegido",
             "description": "Soy diseñadora florista con 15 años de experiencia en la creación de hermosas decoraciones para eventos, tales como bodas, fiestas de cumpleaños y otros.",
@@ -56,27 +59,22 @@
     },
     "services": [
         {
-            "image": "/work_2.jpg",
+            "image": "/img/bg_header.jpg",
             "title": "Game Development",
             "description": "I can provide video game development services because I use tools like Godot Engine, Blender and Pygame."
         },
         {
-            "image": "/work_2.jpg",
+            "image": "/img/bg_header.jpg",
             "title": "Technical support",
             "description": "Help users with Linux or Windows related technical issues, such as installing software or resolving network issues."
         },
         {
-            "image": "/work_2.jpg",
+            "image": "/img/bg_header.jpg",
             "title": "UI/UX Design",
             "description": "I use UI/UX design programs such as QT creator, QT designer and Godot Engine."
-        },
-        {
-            "image": "/work_2.jpg",
-            "title": "Web Development",
-            "description": "I have basic knowledge in web development that will make me capable of creating, assembling and managing web pages."
         }
     ],
-    "galery": {
+    "gallery": {
     	"image_1": "/work_2.jpg",
     	"image_2": "/work_2.jpg",
     	"image_3": "/work_2.jpg",
@@ -87,7 +85,7 @@
     },
     "footer": {
     	"description": "Si estás interesado, contáctanos a nuestro correo electrónico mlfloristdecorator@gmail.com o a nuestro Whatsapp",
-    	"button_whatsapp": "ver más",
+    	"button_whatsapp": "Whatsapp",
     	"title": "Redes sociales: ",
     	"copyright": "© 2023 - 2024 ML Florist Decorator. todos los derechos reservados."
     }

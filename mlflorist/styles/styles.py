@@ -55,3 +55,9 @@ BASE_STYLE = {
         "--cursor-button": "pointer"
     }
 }
+
+# {
+#             "image": "/img/bg_header_5.jpeg",
+#             "title": "Web Development",
+#             "description": "I have basic knowledge in web development that will make me capable of creating, assembling and managing web pages."
+#         }

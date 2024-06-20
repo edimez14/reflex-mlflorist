@@ -1,8 +1,8 @@
 import reflex as rx
-from portafolio.components.card_detail import card_detail
-from portafolio.components.heading import heading
-from portafolio.data import Service
-from portafolio.styles.styles import Size
+from mlflorist.components.card_detail import card_detail
+from mlflorist.components.heading import heading
+from mlflorist.data import Service
+from mlflorist.styles.styles import Size, EmSize
 
 
 def service(services: list[Service]) -> rx.Component:
@@ -15,7 +15,7 @@ def service(services: list[Service]) -> rx.Component:
                     card_detail(service)
                     for service in services
                 ],
-                spacing=Size.DEFAULT.value
+                spacing=Size.BIG.value,
             ),
             width="100%"
         ),
@@ -26,7 +26,7 @@ def service(services: list[Service]) -> rx.Component:
                     for service in services
                 ],
                 spacing=Size.DEFAULT.value,
-                columns="4"
+                columns="3"
             ),
             width="100%"
         ),
